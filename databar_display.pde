@@ -44,6 +44,13 @@ void loop(){
     reset_all();
     data = 0;
   }
+  else if(data == 88) {
+    // 'X' for activate all LEDs
+    for(uint8_t line = 0;line < 9;line++) {
+      lit_line(line, 14);
+    }
+    data = 0;
+  }
   else if(data == 89) {
     // 'Y' for clear line
     clear_line(line);
